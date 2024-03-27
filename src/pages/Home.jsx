@@ -1,13 +1,15 @@
-import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+
 
 
 
 const Home = () => {
     return (
-        <div>
-            <Navbar></Navbar>
-            <h1>hi i am from home</h1>
-        </div>
+      
+ <div className="flex flex-col justify-center min-h-[calc(100vh-134px)]">
+    <Hero></Hero>
+ </div>
+        
     );
 };
 
