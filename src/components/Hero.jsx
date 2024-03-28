@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -9,18 +10,18 @@ const Hero = () => {
             <p className="py-6">ByteBlaze is the bridge between the complex world of technology and the curious minds eager to understand it</p>
            
            <div className="flex  justify-center gap-4">
-           <a href="#_" className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+           <Link to="/blogs" className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
       <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
       <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
       <span className="relative text-white">Read blogs</span>
       </span>
-      </a>
-           <a href="#_" className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+      </Link>
+           <Link to="/bookmarks" className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
       <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
       <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
       <span className="relative text-white">Bookmarks</span>
       </span>
-      </a>
+      </Link>
            </div>
           </div>
         </div>
