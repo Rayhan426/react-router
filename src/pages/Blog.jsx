@@ -1,11 +1,17 @@
 import { useState } from "react";
-import { Link, Outlet, useLoaderData } from "react-router-dom";
+import { Link, Outlet, useLoaderData, useNavigation,} from "react-router-dom";
+import Loader from "../components/Loader";
+
+
 
 
 const Blog = () => {
+const navigation = useNavigation()	
     const blog = useLoaderData()
     const {published_at, comments_count,  public_reactions_count, title, reading_time_minutes} = blog;
     const [tabIndex, setTabIndex] = useState(0);
+
+	if(navigation.state === 'loading') return <Loader></Loader>
 
     return (
         <div>
