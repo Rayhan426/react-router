@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Link, Outlet, useLoaderData, useNavigation,} from "react-router-dom";
 import Loader from "../components/Loader";
-
+import { BsBookmarkStarFill } from "react-icons/bs";
 
 
 
 const Blog = () => {
 const navigation = useNavigation()	
     const blog = useLoaderData()
+	const handleBookmark = (blog)=>{
+console.log(blog);
+	}
     const {published_at, comments_count,  public_reactions_count, title, reading_time_minutes} = blog;
     const [tabIndex, setTabIndex] = useState(0);
 
@@ -44,7 +47,10 @@ const navigation = useNavigation()
 		</svg>
 		<span>Author</span>
 	</Link>
-
+{/* bookmark btn  */}
+<div onClick={()=> handleBookmark(blog)} className="ml-2 bg-primary p-3 rounded-full hover:bg-opacity-30 bg-opacity-20 cursor-pointer text-secondary hover:scale-105 overflow-hidden">
+	<BsBookmarkStarFill></BsBookmarkStarFill>
+</div>
 </div>
 {/* end tab  */}
 		</div>
