@@ -13,7 +13,6 @@ const BlogCard = ({blog}) => {
                         <p>{description}</p>
                     </div>
                 </Link>
-       
     );
 };
 
