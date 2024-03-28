@@ -7,7 +7,7 @@ const Content = () => {
     const blog = useLoaderData();
     const { title,  cover_image, tags, body_html} = blog;
     return (
-        <div>
+      
               <div rel="noopener noreferrer" className=" border-2  border-primary  border-opacity-30 rounded-lg mx-auto p-2 group hover:no-underline focus:no-underline dark:bg-gray-50">
                     <img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src={cover_image || errorImg} />
                     <div className="flex flex-wrap py-6 gap-2 border-t border-dashed dark:border-gray-600">
@@ -22,7 +22,7 @@ const Content = () => {
                        
                     </div>
                 </div>
-        </div>
+      
     );
 };
 
