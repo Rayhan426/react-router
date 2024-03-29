@@ -4,6 +4,7 @@ import errorImg from '../assets/images/404.jpg'
 import { MdDeleteForever } from "react-icons/md";
 
 
+
 const BlogCard = ({blog, deleteAble, handleDelete}) => {
     const {description, title, id, cover_image, published_at} = blog;
   
@@ -33,5 +34,7 @@ const BlogCard = ({blog, deleteAble, handleDelete}) => {
 
 BlogCard.propTypes = {
     blog:  PropTypes.object.isRequired,
+    deleteAble: PropTypes.object,
+    handleDelete: PropTypes.func
 }
 export default BlogCard;
