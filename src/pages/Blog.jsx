@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, Outlet, useLoaderData, useNavigation,} from "react-router-dom";
 import Loader from "../components/Loader";
 import { BsBookmarkStarFill } from "react-icons/bs";
+import { setBlogs } from "../utils";
 
 
 
@@ -9,7 +10,7 @@ const Blog = () => {
 const navigation = useNavigation()	
     const blog = useLoaderData()
 	const handleBookmark = (blog)=>{
-console.log(blog);
+		setBlogs(blog)
 	}
     const {published_at, comments_count,  public_reactions_count, title, reading_time_minutes} = blog;
     const [tabIndex, setTabIndex] = useState(0);

@@ -23,7 +23,7 @@ const Blogs = () => {
             </Link>
             <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {
-                    blogs.map((blog, idx)=> <BlogCard key={idx} blog={blog}></BlogCard>)
+                    blogs.slice(1, 19).map((blog, idx)=> <BlogCard key={idx} blog={blog}></BlogCard>)
                 }
             </div>
             <div className="flex justify-center">
